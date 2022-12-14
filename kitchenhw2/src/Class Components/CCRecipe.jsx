@@ -13,7 +13,9 @@ export default class CCRecipe extends Component{
     }
 
     btnPrep= ()=>{
-        this.props.onPreapreClick(this.state.id);
+        this.props.onPreapreClick
+        ? this.props.onPreapreClick(this.state.id)
+        : this.props.onEatClick(this.state.id);
     }
 
     render(){

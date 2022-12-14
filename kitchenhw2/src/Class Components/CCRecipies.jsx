@@ -43,10 +43,10 @@ export default class CCRecipies extends Component{
     }
     onEatClick= (id) =>{
         console.log("Eat id "+ id);
-        let eat =this.state.prepared.filter((recipe)=> recipe.id==id)
-        let removeEat=this.state.prepared.filter((recipe)=> recipe.id!=id);
-        eat=eat.concat(this.state.recipies);
-        this.setState({...this.state,recipies:removeEat,prepared:eat})
+        let Removeeat =this.state.prepared.filter((recipe)=> recipe.id===id);
+        let Eat=this.state.prepared.filter((recipe)=> recipe.id!==id);
+        Removeeat=Removeeat.concat(this.state.recipies);
+        this.setState({...this.state,recipies:Removeeat,prepared:Eat})
     }
 
     render(){
